@@ -23,6 +23,14 @@ namespace primeira_api.Controllers
             return Ok(obj);
         }
 
+        [HttpGet("SejaBemVindo/{nome}")]
+        public IActionResult SejaBemVindo(string nome) {
+
+            var mensagem =  $"Seja Bem Vindo {nome}! Que Deus te Abençoe sempre!";
+
+            return Ok(new {mensagem});
+        }
+
 
     }
 }
